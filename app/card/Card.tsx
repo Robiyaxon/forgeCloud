@@ -1,8 +1,5 @@
 import React from 'react'
-
 import logo from './logo.png'
-
-import style from './Card.module.css'
 import Image from 'next/image'
 
 export const Card = () => {
@@ -83,19 +80,19 @@ export const Card = () => {
 
 
   return (
-    <div className={style.wrap}>
-      <div className={style.title}>
-        <h1>Mehr als eine Website</h1>
-        <p>Entdecken Sie unsere clevere & zukunftssichere Lösung für den Online-Auftritt Ihres Industrieunternehmens</p>
+    <div className={"bg-gradient-to-br from-blue-400 via-green-400 to-transparent pb-8"}>
+      <div >
+        <h1 className='py-40 px-0 my-auto text-gray-800 text-center font-Blinker text-4xl font-semibold leading-normal'>Mehr als eine Website</h1>
+        <p className='w-1/2 text-blue-800 text-center font-Blinker text-base font-normal leading-7 mx-auto'>Entdecken Sie unsere clevere & zukunftssichere Lösung für den Online-Auftritt Ihres Industrieunternehmens</p>
       </div>
       <div>
       </div>
 
       <div className={"mt-8 " }>
         <div className="flow-root ">
-          <ul role="list" className={"-my-6 divide-y divide-gray-200 " + style.card_wrap}>
+          <ul role="list" className={"-my-6 divide-y divide-gray-200 flex flex-wrap w-11/12	 mx-auto justify-between" }>
             {products.map((product) => (
-              <li key={product.id} className={"flex py-6 " + style.card_block}>
+              <li key={product.id} className={"w-[30%] flex flex-wrap rounded-md bg-[#2E2C2F] shadow-md p-[20px] mb-8 "}>
                 <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md">
                   <Image
                     src={logo}
@@ -107,18 +104,18 @@ export const Card = () => {
                 <div className="justify-center ml-4 flex flex-1 flex-col ">
                   <div>
                     <div className="flex justify-between text-base font-medium">
-                      <h3>
+                      <h3 className='text-white text-center font-Blinker text-xl font-semibold leading-tight'>
                         <a href={product.href}>{product.name}</a>
                       </h3>
                     </div>
                   </div>
                 </div>
-                <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                <p className="text-white font-Blinker text-base font-normal leading-tight mt-4">{product.color}</p>
 
               </li>
             ))}
           </ul>
-          <button className={style.btn}>Jetzt Rabatt sichern</button>
+          <button className={"w-[360px] h-[56px] bg-red-600 text-white mx-auto my-4 mb-[40px] flex justify-center items-center"}>Jetzt Rabatt sichern</button>
 
         </div>
       </div>

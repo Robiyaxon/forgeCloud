@@ -5,3 +5,24 @@
 .divide-gray-200 > :not([hidden]) ~ :not([hidden]){
     border: none;
 }
+.bg-custom-background {
+    background-image: url(./main/background.png);
+  }
+  .main_wrap{
+    background-image: url(../app/main/background.png);
+
+}
+  .block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 31px;
+}
+
+.block img {
+    width: 80px;
+    height: 45.678px;
+    flex-shrink: 0;
+    margin-right: 10px;
+   
+}
